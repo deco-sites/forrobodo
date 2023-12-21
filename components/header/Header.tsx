@@ -6,6 +6,7 @@ import type { SiteNavigationElement } from "apps/commerce/types.ts";
 import Alert from "./Alert.tsx";
 import Navbar from "./Navbar.tsx";
 import { headerHeight } from "./constants.ts";
+import type { Country } from "$store/components/header/Buttons/Language.tsx";
 
 export interface Props {
   alerts: string[];
@@ -21,6 +22,13 @@ export interface Props {
 
   /** @title Logo */
   logo?: { src: ImageWidget; alt: string };
+
+  /**
+   * @title Flag Icon
+   * @Description Internationalization Menu Flag Icon
+   */
+  /** @title Country Flag */
+  countryFlag: Country[];
 }
 
 function Header({
@@ -28,6 +36,7 @@ function Header({
   searchbar,
   navItems,
   logo,
+  countryFlag,
 }: Props) {
   const platform = usePlatform();
   const items = navItems ?? [];
@@ -46,6 +55,7 @@ function Header({
               items={items}
               searchbar={searchbar && { ...searchbar, platform }}
               logo={logo}
+              countryFlag={countryFlag}
             />
           </div>
         </Drawers>

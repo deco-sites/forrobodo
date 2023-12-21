@@ -23,10 +23,6 @@ export interface Banner {
   action?: {
     /** @description when user clicks on the image, go to this link */
     href: string;
-    /** @description Image text title */
-    title: string;
-    /** @description Image text subtitle */
-    subTitle: string;
     /** @description Button label */
     label: string;
   };
@@ -52,8 +48,6 @@ const DEFAULT_PROPS = {
       action: {
         href: "https://www.deco.cx/",
         label: "deco.cx",
-        title: "Demo Store",
-        subTitle: "Visit our site and start building now:",
       },
       mobile:
         "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/24278f9e-412d-4a8a-b2d3-57353bb1b368",
@@ -65,8 +59,6 @@ const DEFAULT_PROPS = {
       action: {
         href: "https://www.deco.cx/",
         label: "deco.cx",
-        title: "Demo Store",
-        subTitle: "Visit our site and start building now:",
       },
       mobile:
         "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/eeaa624c-a3e1-45e8-a6fe-034233cfbcd0",
@@ -78,8 +70,6 @@ const DEFAULT_PROPS = {
       action: {
         href: "https://www.deco.cx/",
         label: "deco.cx",
-        title: "Demo Store",
-        subTitle: "Visit our site and start building now:",
       },
       mobile:
         "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/239/ae89571c-4a7c-44bf-9aeb-a341fd049d19",
@@ -129,17 +119,6 @@ function BannerItem(
           alt={alt}
         />
       </Picture>
-      {action && (
-        <div class="absolute h-min top-0 bottom-0 m-auto left-0 right-0 sm:right-auto sm:left-[12%] max-h-min max-w-[400px] flex flex-col gap-4 p-4 rounded glass">
-          <span class="text-6xl font-medium text-base-100">
-            {action.title}
-          </span>
-          <span class="font-medium text-xl text-base-100">
-            {action.subTitle}
-          </span>
-          <Button class="glass">{action.label}</Button>
-        </div>
-      )}
     </a>
   );
 }
