@@ -19,7 +19,7 @@ export default function Hero({ title, subTitle, image }: Props) {
           alt={image.alt}
           width={924}
           height={520}
-          class="object-cover w-full h-full rounded-md md:mr-6 mr-0 max-w-3xl"
+          class="object-cover w-full h-full rounded-md md:mr-8 mr-0 max-w-3xl"
         />
       </div>
       <div class="w-full lg:w-1/2">

@@ -8,9 +8,9 @@ import * as $$$$$$0 from "./sections/Animation/Animation.tsx";
 import * as $$$$$$1 from "./sections/Category/CategoryBanner.tsx";
 import * as $$$$$$2 from "./sections/Category/CategoryList.tsx";
 import * as $$$$$$3 from "./sections/Content/Benefits.tsx";
-import * as $$$$$$4 from "./sections/Content/Faq.tsx";
-import * as $$$$$$5 from "./sections/Content/Hero.tsx";
-import * as $$$$$$6 from "./sections/Content/Logos.tsx";
+import * as $$$$$$4 from "./sections/Content/BlogTags.tsx";
+import * as $$$$$$5 from "./sections/Content/Faq.tsx";
+import * as $$$$$$6 from "./sections/Content/Hero.tsx";
 import * as $$$$$$7 from "./sections/Content/Testimonials.tsx";
 import * as $$$$$$8 from "./sections/Footer/Footer.tsx";
 import * as $$$$$$9 from "./sections/Gallery.tsx";
@@ -53,9 +53,9 @@ const manifest = {
     "deco-sites/forrobodo/sections/Category/CategoryBanner.tsx": $$$$$$1,
     "deco-sites/forrobodo/sections/Category/CategoryList.tsx": $$$$$$2,
     "deco-sites/forrobodo/sections/Content/Benefits.tsx": $$$$$$3,
-    "deco-sites/forrobodo/sections/Content/Faq.tsx": $$$$$$4,
-    "deco-sites/forrobodo/sections/Content/Hero.tsx": $$$$$$5,
-    "deco-sites/forrobodo/sections/Content/Logos.tsx": $$$$$$6,
+    "deco-sites/forrobodo/sections/Content/BlogTags.tsx": $$$$$$4,
+    "deco-sites/forrobodo/sections/Content/Faq.tsx": $$$$$$5,
+    "deco-sites/forrobodo/sections/Content/Hero.tsx": $$$$$$6,
     "deco-sites/forrobodo/sections/Content/Testimonials.tsx": $$$$$$7,
     "deco-sites/forrobodo/sections/Footer/Footer.tsx": $$$$$$8,
     "deco-sites/forrobodo/sections/Gallery.tsx": $$$$$$9,
