@@ -3,18 +3,17 @@ import Image from "apps/website/components/Image.tsx";
 import type { ImageWidget } from "apps/admin/widgets.ts";
 
 export interface Country {
-    countryLabel: string;
-    languageAbbreviation: string;
-    countryImg: {
-      img: ImageWidget;
-      alt: string;
-    };
-  }
+  countryLabel: string;
+  languageAbbreviation: string;
+  countryImg: {
+    img: ImageWidget;
+    alt: string;
+  };
+}
 
 export default function LanguageSwitcher({ countryFlag }: {
   countryFlag: Country[];
 }) {
- 
   return (
     <>
       <details class="dropdown">
