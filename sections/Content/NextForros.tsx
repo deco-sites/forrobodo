@@ -2,40 +2,41 @@ import Icon from "../../components/ui/Icon.tsx";
 import Header from "$store/components/ui/SectionHeader.tsx";
 import Button from "deco-sites/forrobodo/components/ui/Button.tsx";
 
-const citys = [
-  { city: "Rio de Janeiro", state: "RJ" },
-  { city: "São Paulo", state: "SP" },
-  { city: "Campina Grande", state: "PB" },
-];
+export interface City {
+  label: string;
+  state: string;
+}
 
-const forros = [
-  {
-    forro: "Roda de Forró de Rabeca",
-    location: "Armazém do Campo",
-    time: "20:00",
-  },
-  { forro: "Forró do Vuvu", location: "Rua Temporá, 283", time: "21:00" },
-  {
-    forro: "Roda de Forró de Rabeca",
-    location: "Armazém do Campo",
-    time: "20:00",
-  },
-];
+export interface Forro {
+  label: string;
+  location: string;
+  time: string;
+}
 
-export default function NextForros() {
+export interface Props {
+  title?: string;
+  fontSize?: "Large" | "Normal";
+  layout?: "left" | "center";
+  cities: City[];
+  forros: Forro[];
+}
+
+export default function NextForros(
+  { title, fontSize, layout, cities, forros }: Props,
+) {
   return (
     <div class="w-full container lg:px-10 px-4">
       <Header
-        title="Próximos forrós"
-        fontSize="Large"
-        alignment="center"
+        title={title ?? "Próximos forrós"}
+        fontSize={fontSize ?? "Large"}
+        alignment={layout ?? "center"}
       />
       <div class="w-full flex justify-center py-4">
         <details class="dropdown w-full max-w-[200px]">
           <summary class="btn px-0 md:px-2 items-center flex flex-row md:flex-nowrap border justify-normal bg-transparent hover:bg-transparent uppercase text-base font-normal">
             <div class="flex flex-row items-center">
-              <span class="capitalize mr-5">
-                {citys[0].city}, {citys[0].state}
+              <span class="mr-5">
+                {cities[0].label}, {cities[0].state}
               </span>
             </div>
             <Icon
@@ -46,10 +47,10 @@ export default function NextForros() {
             />
           </summary>
           <ul class="p-2 shadow menu w-auto dropdown-content z-[1] bg-base-100 rounded-box">
-            {citys.map((city) => {
+            {cities.map((city) => {
               return (
                 <button class="cursor-pointer m-1 flex justify-center items-center uppercase gap-2 h-8 px-0 flex-row flex-nowrap border-none hover:border-none bg-transparent hover:bg-transparent w-max text-base font-normal">
-                  {city.city}, {city.state}
+                  {city.label}, {city.state}
                 </button>
               );
             })}
@@ -66,7 +67,7 @@ export default function NextForros() {
           {forros.map((forro) => (
             <li class="border border-black justify-between rounded-lg flex flex-row w-full max-w-md items-center mx-auto">
               <div class="flex flex-col py-4 px-4">
-                <p class="font-medium">{forro.forro}</p>
+                <p class="font-medium">{forro.label}</p>
                 <p class="text-gray-400 italic">
                   {forro.location} - {forro.time}
                 </p>
