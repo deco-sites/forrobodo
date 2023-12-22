@@ -26,10 +26,10 @@ export default function FooterItems(
             {sections.map((section) => (
               <li>
                 <div class="flex flex-col gap-2">
-                  <span class="font-medium text-lg">
+                  <span class="font-medium text-lg text-secondary-content">
                     {section.label}
                   </span>
-                  <ul class={`flex flex-col gap-2 flex-wrap text-sm`}>
+                  <ul class={`flex flex-col gap-2 flex-wrap text-sm text-secondary-content`}>
                     {section.items?.map((item) => (
                       <li>
                         <a href={item.href} class="block py-1 link link-hover">
@@ -49,12 +49,12 @@ export default function FooterItems(
               <li>
                 <div class="collapse collapse-arrow ">
                   <input type="checkbox" class="min-h-[0]" />
-                  <div class="collapse-title min-h-[0] !p-0 flex gap-2">
+                  <div class="collapse-title min-h-[0] !p-0 flex gap-2 text-secondary-content">
                     <span>{section.label}</span>
                   </div>
                   <div class="collapse-content">
                     <ul
-                      class={`flex flex-col gap-1 pl-5 pt-2`}
+                      class={`flex flex-col gap-1 pl-5 pt-2 text-secondary-content`}
                     >
                       {section.items?.map((item) => (
                         <li>

@@ -50,7 +50,7 @@ function Newsletter(
           : "flex-col gap-4"
       }`}
     >
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-4 text-secondary-content">
         {content?.title && (
           <h3 class={tiled ? "text-2xl lg:text-3xl" : "text-lg"}>
             {content?.title}
@@ -58,7 +58,7 @@ function Newsletter(
         )}
         {content?.description && <div>{content?.description}</div>}
       </div>
-      <div class="flex flex-col gap-4">
+      <div class="flex flex-col gap-4 text-secondary-content">
         <form
           class="form-control"
           onSubmit={handleSubmit}
@@ -66,7 +66,7 @@ function Newsletter(
           <div class="flex flex-wrap gap-3">
             <input
               name="email"
-              class="flex-auto md:flex-none input input-bordered md:w-80 text-base-content"
+              class="flex-auto md:flex-none input input-bordered md:w-80 text-secondary-content"
               placeholder={content?.form?.placeholder || "Digite seu email"}
             />
             <button

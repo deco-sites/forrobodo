@@ -20,7 +20,7 @@ export default function Social(
   return (
     <>
       {content && content.items && content.items.length > 0 && (
-        <div class="flex flex-col gap-4">
+        <div class="flex flex-col gap-4 text-secondary-content">
           {content.title && <h3 class="text-lg">{content.title}</h3>}
           <ul
             class={`flex gap-4 ${
@@ -38,10 +38,16 @@ export default function Social(
                     class="flex gap-2 items-center"
                   >
                     <span class="block p-1 border rounded-full">
-                      <Icon size={24} id={item.label} />
+                      <Icon
+                        size={24}
+                        id={item.label}
+                        class="text-secondary-content"
+                      />
                     </span>
                     {vertical && (
-                      <div class="text-sm hidden lg:block">{item.label}</div>
+                      <div class="text-sm hidden lg:block text-secondary-content">
+                        {item.label}
+                      </div>
                     )}
                   </a>
                 </li>
