@@ -33,9 +33,11 @@ export default function ForroTextWithImg(
       />
       <p class="py-4" dangerouslySetInnerHTML={{ __html: text }} />
       <div class="flex justify-center w-full my-5">
-        <Button class="bg-black text-white hover:text-black">
-          Leia mais
-        </Button>
+        <a href="/institucional/forro">
+          <Button class="bg-black text-white hover:text-black">
+            Leia mais
+          </Button>
+        </a>
       </div>
       <div>
         <Image

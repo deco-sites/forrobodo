@@ -35,7 +35,7 @@ export default function NextForros(
         <details class="dropdown w-full max-w-[200px]">
           <summary class="btn px-0 md:px-2 items-center flex flex-row md:flex-nowrap border justify-normal bg-transparent hover:bg-transparent uppercase text-base font-normal">
             <div class="flex flex-row items-center">
-              <span class="mr-5">
+              <span class="mr-5 capitalize">
                 {cities[0].label}, {cities[0].state}
               </span>
             </div>

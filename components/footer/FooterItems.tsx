@@ -29,7 +29,9 @@ export default function FooterItems(
                   <span class="font-medium text-lg text-secondary-content">
                     {section.label}
                   </span>
-                  <ul class={`flex flex-col gap-2 flex-wrap text-sm text-secondary-content`}>
+                  <ul
+                    class={`flex flex-col gap-2 flex-wrap text-sm text-secondary-content`}
+                  >
                     {section.items?.map((item) => (
                       <li>
                         <a href={item.href} class="block py-1 link link-hover">
